@@ -26,7 +26,8 @@ Handlebars.registerHelper('async', function(arg1) {
 
 var tpl = Handlebars.compile('{{asyncHelper "value"}}');
 
-tpl(function (err, result) {
+// Pass object to apply template to and a callback method to trigger upon completion
+tpl( {}, function (err, result) {
   // result == "VALUE"
 });
 ```
